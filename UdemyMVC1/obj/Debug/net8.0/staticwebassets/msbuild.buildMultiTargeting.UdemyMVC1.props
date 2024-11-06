@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\UdemyMVC1.props" />
+</Project>
