@@ -1,4 +1,13 @@
+using Microsoft.EntityFrameworkCore;
+using UdemyMVC1.Data;
+
 var builder = WebApplication.CreateBuilder(args);
+
+//Config conexion sql
+
+builder.Services.AddDbContext<ApplicationDBContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("SqlConnection"))
+);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
